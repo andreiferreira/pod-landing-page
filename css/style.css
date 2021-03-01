@@ -17,6 +17,9 @@ body{
 }
 
 .conteudo__header-logo{
+    grid-area: conteudo__header-logo;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     background: url('../images/podcast.png');
     background-size: 200px 50px;
     background-position: center;
@@ -42,10 +45,18 @@ body{
      color: black;
 }
 
+.conteudo__header___lista-medias-sociais .conteudo__header__media-social .fa:hover{
+    color: white;
+}
+
 .conteudo__principal{
     grid-area: conteudo__principal;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .conteudo__principal___titulo{
@@ -55,6 +66,16 @@ body{
     font-weight: bolder;
 }
 
+.conteudo__principal___titulo:hover{
+    color: black;
+}
+
+#everywhere:hover{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
 .conteudo__principal___descricao{
     font-family: monospace;
     font-size: 20px;
@@ -63,21 +84,23 @@ body{
 .conteudo__principal___input{
     background-color:#ccb3ff;
     height: 45px;
-    width: 300px;
+    width: 100%;
     border-radius: 20px 20px 20px 20px;
 }
 
 .conteudo__principal___input::-webkit-input-placeholder{
     color: black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .conteudo__principal___botao{
     background-color: #ccb3ff;
     font-weight: bolder;
     height: 50px;
+    width: 100%;
     border-radius: 20px 20px 20px 20px;
+    margin-top: 0.5em;
 }
 
 .conteudo__imagem{
@@ -110,7 +133,7 @@ body{
 }
 /*/////////////////////////*/
 
-@media (min-width:320px){
+@media (max-width:769px){
 
     .conteudo{
         width: 100%;
@@ -184,31 +207,12 @@ body{
 @media (min-width:770px){
     .conteudo{
         width: 100%;
-        grid-template-columns: 45% 55%;
         grid-template-rows: 10vh 80vh 10vh ;
     }
-   
-    .conteudo__header-logo{
-        grid-column: 1 / 2;
-    }
-    
-    .conteudo__header-social{
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
-    
+
     .conteudo__header___lista-medias-sociais .conteudo__header__media-social .fa {
          font-size: 30px;
          color: black;
-    }
-    
-    .conteudo__principal{
-        grid-row: 2 / 3;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        grid-auto-flow: column;
-        justify-content: center;
     }
     
     .conteudo__principal___titulo{
@@ -226,7 +230,6 @@ body{
     .conteudo__principal___input{
         background-color:#ccb3ff;
         height: 35px;
-        border-radius: 20px 20px 20px 20px;
     }
 
     .conteudo__imagem{
