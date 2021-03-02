@@ -103,6 +103,10 @@ body{
     margin-top: 0.5em;
 }
 
+.conteudo__principal___botao:hover{
+    background-color: #b7a1e5;
+}
+
 .conteudo__imagem{
     grid-area: conteudo__imagem;
     background: url('../images/podcast_image.jpg') center / cover;

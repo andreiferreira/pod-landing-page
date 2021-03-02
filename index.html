@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css//normalize.css">
     <link rel="stylesheet" href="./css/reset.css">
-
+    
 </head>
 <body>
     <main class="conteudo container">
@@ -26,8 +26,10 @@
         <section class="conteudo__principal">
                 <h1 class="conteudo__principal___titulo">PUBLISH YOUR PODCASTS <span id="everywhere">EVERYWHERE.</span></h1>
                 <h3 class="conteudo__principal___descricao">Upload your audio to Pod with a single click. We'll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts and more!</h3>
-                <form class="conteudo__principal___form">
-                    <input idtype="text" placeholder="email" id="inputEmail" class="conteudo__principal___input" autofocus><span><button id="btnSubmit" class="conteudo__principal___botao" >Request Access</button></span>
+                
+                <form class="conteudo__principal___form" onsubmit="enviarDados()">
+                    <input type="text" placeholder="email" id="inputEmail" class="conteudo__principal___input" autofocus>
+                    <button id="btnSubmit" class="conteudo__principal___botao"  >Request Access</button>
                 </form>
         </section>
         <section class="conteudo__imagem">
@@ -46,3 +48,5 @@
     
 </body>
 </html>
+
+<script src="./js/script.js"></script>
